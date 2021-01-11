@@ -23,67 +23,20 @@
     <meta name="msapplication-wide310x150logo" content="icons/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="icons/mstile-310x310.png" />
 
-    <style media="screen">
-        #Instagram {
-          bottom: 0%;
-          right: 0%;
-          position: absolute;
-        }
-        a:link {
-          color: rgb(255, 0, 0);
-        }
-        a:visited{
-          color:rgba(0, 255, 0);
-        }
-        body{
-          font-family: sans-serif;
-          background-color: #24292e
-
-        }
-        h1{
-          color: #c6cccf;
-          font-size: 30px
-        }
-        h2, label{
-          color: #98c379;
-          font-size: 20px
-        }
-        .pointer{
-          cursor: pointer;
-        }
-        h3, .h3{
-          font-size: 12px;
-          color: #FFF933
-        }
-        .icon{
-          position: relative;
-          width: 15px;
-          height: 20px;
-          top: 3px;
-          margin-right: 5px;
-        }
-        .content{
-          margin-left: 20px
-        }
-        li.default{
-          color: rgb(200, 150, 100);
-          font-size:16px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archív - 1.A</title>
   </head>
   <body>
     <h1>Archív - 1.A</h1>
-    <label for="ANJButton" style="display:block" class="pointer"><img class="icon" src="icons/dropdown.png"><b>ANJ:</b></label>
+    <label for="ANJButton" class="pointer"><img class="icon" src="icons/dropdown.png"><b>ANJ:</b></label>
     <div class="content" id="ANJ" style="display:none">
       <li class="default"><a href="sources/3.lekcia.pdf">Slová - 3. Lekcia</a></li>
       <li class="default"><a href="sources/anj_nepravidelne.pdf">Nepravidelné slová</a></li>
-
     </div>
-    <label for="CHEButton" style="display:block" class="pointer"><img class="icon" src="icons/dropdown.png"><b>CHE:</b></label>
+
+    <br><label for="CHEButton" class="pointer"><img class="icon" src="icons/dropdown.png"><b>CHE:</b></label>
     <div class="content" id="CHE" style="display:none">
       <li class="default"><a href="sources/CheVäzba.pdf">Chemická väzba</a></li>
       <li class="default"><a href="sources/reakcie.pdf">Chemické reakcie</a></li>
@@ -92,7 +45,7 @@
       <li class="default"><a href="sources/atom.pdf">Atóm</a></li>
 
     </div>
-    <label for="BIOButton" style="display:block" class="pointer"><img class="icon" src="icons/dropdown.png"><b>BIO:</b></label>
+    <br><label for="BIOButton" class="pointer"><img class="icon" src="icons/dropdown.png"><b>BIO:</b></label>
     <div class="content" id="BIO" style="display:none">
       <li class="default"><a href="sources/Huby2.pdf">Huby 2</a></li>
       <li class="default"><a href="sources/huby.pdf">Huby</a></li>
@@ -119,7 +72,7 @@
 
 
 
-    <label for="GEOButton" style="display:block" class="pointer"><img class="icon" src="icons/dropdown.png"><b>GEO:</b></label>
+    <br><label for="GEOButton" class="pointer"><img class="icon" src="icons/dropdown.png"><b>GEO:</b></label>
     <div class="content" id="GEO" style="display: none">
       <li class="h3"><b>Hydrosféra:</b>
       <p class="hydros">

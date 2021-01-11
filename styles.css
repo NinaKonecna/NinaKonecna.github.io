@@ -1,0 +1,57 @@
+#Instagram {
+  bottom: 0%;
+  right: 0%;
+  position: absolute;
+}
+a:link {
+  color: rgb(255, 0, 0);
+}
+a:visited{
+  color:rgba(0, 255, 0);
+}
+body{
+  font-family: sans-serif;
+  background-color: #24292e
+
+}
+h1{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #c6cccf;
+  font-size: 30px
+}
+h2, label{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #98c379;
+  font-size: 20px
+}
+.pointer{
+  cursor: pointer;
+}
+h3, .h3{
+  font-size: 12px;
+  color: #FFF933
+}
+.icon{
+  position: relative;
+  width: 15px;
+  height: 20px;
+  top: 3px;
+  margin-right: 5px;
+}
+.content{
+  margin-left: 20px
+}
+li.default{
+  color: rgb(200, 150, 100);
+  font-size:16px;
+}
