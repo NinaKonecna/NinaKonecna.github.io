@@ -24,20 +24,39 @@
     <meta name="msapplication-square310x310logo" content="icons/mstile-310x310.png" />
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archív - 1.A</title>
   </head>
   <body>
-    <h1>Archív - 1.A</h1>
-    <label for="ANJButton" class="pointer"><img class="icon" src="icons/dropdown.png"><b>ANJ:</b></label>
+
+
+
+    <ul id="Menu">
+      <li style="margin-top:2vh"><label id="ANJLabel" for="ANJButton" class="UnSelectedpointer"><b>Angličtina</b></label></li>
+      <li><label id="CHELabel" for="CHEButton" class="UnSelectedpointer"><b>Chémia</b></label></li>
+      <li><label id="BIOLabel" for="BIOButton" class="UnSelectedpointer"><b>Biológia</b></label></li>
+      <li><label id="FYZLabel" for="FYZButton" class="UnSelectedpointer"><b>Fyzikálne vzorce</b></label></li>
+
+      <li><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Geografia</b></label>
+        <ul id="dropdown-content">
+          <li><label id="HYDGEOLabel" for="HYDGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Hydrosféra</b></label></li>
+          <li><label id="ATMGEOLabel" for="ATMGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Atmosféra</b></label></li>
+        </ul>
+      </li>
+
+    </ul>
+              <div style="padding: 5px; margin-left: 32vh; margin-top:0;"><h1 style="margin-top:1vh">Archív - 1.A</h1></div>
+
     <div class="content" id="ANJ" style="display:none">
+      <h2 style="margin-top:0">Angličtina</h2>
       <li class="default"><a href="sources/3.lekcia.pdf">Slová - 3. Lekcia</a></li>
       <li class="default"><a href="sources/anj_nepravidelne.pdf">Nepravidelné slová</a></li>
     </div>
 
-    <br><label for="CHEButton" class="pointer"><img class="icon" src="icons/dropdown.png"><b>CHE:</b></label>
     <div class="content" id="CHE" style="display:none">
+      <h2 style="margin-top:0">Chémia</h2>
       <li class="default"><a href="sources/CheVäzba.pdf">Chemická väzba</a></li>
       <li class="default"><a href="sources/reakcie.pdf">Chemické reakcie</a></li>
       <li class="default"><a href="sources/psp.pdf">Periodická sústava prvkov</a></li>
@@ -45,8 +64,8 @@
       <li class="default"><a href="sources/atom.pdf">Atóm</a></li>
 
     </div>
-    <br><label for="BIOButton" class="pointer"><img class="icon" src="icons/dropdown.png"><b>BIO:</b></label>
     <div class="content" id="BIO" style="display:none">
+      <h2 style="margin-top:0">Biológia</h2>
       <li class="default"><a href="sources/Huby2.pdf">Huby 2</a></li>
       <li class="default"><a href="sources/huby.pdf">Huby</a></li>
       <li class="default"><a href="sources/dvojklicnoliste.pdf">Čelade dvojklíčnolistých rastlín</a></li>
@@ -61,8 +80,8 @@
       <li class="default"><a href="sources/Vírusy.pdf">Vírusy</a></li>
 
     </div>
-    <br><label for="FYZButton" class="pointer"><img class="icon" src="icons/dropdown.png"><b>Fyz Vzorce:</b></label>
     <div class="content" id="FYZ" style="display:none">
+        <h2 style="margin-top:0">Fyzikálne vzorce</h2>
         <li class="default"><a href="sources/Vzorce.pdf">Všetky Vzorce</a></li>
 
     </div>
@@ -70,45 +89,48 @@
 
     <button onclick="toggleContent('BIO')" id="BIOButton" style="display:none"></button>
     <button onclick="toggleContent('FYZ')" id="FYZButton" style="display:none"></button>
-    <button onclick="toggleContent('GEO')" id="GEOButton" style="display:none"></button>
+    <button onclick="toggleContent('HYDGEO')" id="HYDGEOButton" style="display:none"></button>
+    <button onclick="toggleContent('ATMGEO')" id="ATMGEOButton" style="display:none"></button>
     <button onclick="toggleContent('ANJ')" id="ANJButton" style="display:none"></button>
     <button onclick="toggleContent('CHE')" id="CHEButton" style="display:none"></button>
 
 
 
 
-    <br><label for="GEOButton" class="pointer"><img class="icon" src="icons/dropdown.png"><b>GEO:</b></label>
-    <div class="content" id="GEO" style="display: none">
-      <li class="h3"><b>Hydrosféra:</b>
-      <p class="hydros">
-        <ul>
-          <li class="default"><a href="sources/JazeraNadrze.pdf">Jazerá a vodné nádrže, <b>POZOR DOMÁCA ÚLOHA</b></a></li>
-          <li class="default"><a href="sources/vlastnostimora.pdf">Fyzikálne a chemické vlastnosti morskej vody</a></li>
-          <li class="default"><a href="sources/Hydrosfera.pdf">Hydrosféra</a></li>
-        </ul>
-      </p></li>
-      <li class="h3"><b>Atmosféra:</b>
-      <p class="atmos">
-        <ul>
-          <li class="default"><a href="sources/atmosfera-cirkulacia.pdf">Všeobecná cirkulácia v atmosfére</a></li>
-          <li class="default"><a href="sources/fronty-atmosfera.pdf">Vzduchové hmoty, atmosferické fronty</a></li>
-          <li class="default"><a href="sources/atmosfericke_procesy.pdf">Atmosferické procesy</a></li>
-          <li class="default"><a href="sources/atmosfera.pdf">Atmosféra</a></li>
-        </ul>
-      </p></li>
+    <div class="content" id="HYDGEO" style="display: none">
+      <h2 style="margin-top:0">Geografia - Hydrosféra</h2>
+      <li class="default"><a href="sources/JazeraNadrze.pdf">Jazerá a vodné nádrže, <b>POZOR DOMÁCA ÚLOHA</b></a></li>
+      <li class="default"><a href="sources/vlastnostimora.pdf">Fyzikálne a chemické vlastnosti morskej vody</a></li>
+      <li class="default"><a href="sources/Hydrosfera.pdf">Hydrosféra</a></li>
+    </div>
+    <div class="content" id="ATMGEO" style="display:none">
+      <h2 style="margin-top:0">Geografia - Atmosféra</h2>
+      <li class="default"><a href="sources/atmosfera-cirkulacia.pdf">Všeobecná cirkulácia v atmosfére</a></li>
+      <li class="default"><a href="sources/fronty-atmosfera.pdf">Vzduchové hmoty, atmosferické fronty</a></li>
+      <li class="default"><a href="sources/atmosfericke_procesy.pdf">Atmosferické procesy</a></li>
+      <li class="default"><a href="sources/atmosfera.pdf">Atmosféra</a></li>
     </div>
 
 
 
 
-    <a id="Instagram" href="https://www.instagram.com/ridigophoenix/"><img width="25" height="25" src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt=""></a>
+    <a id="Instagram" href="https://www.instagram.com/ridigophoenix/"><img style="width:3vh" src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt=""></a>
     <script>
       function toggleContent(id) {
-        // Get the DOM reference
-        var contentId = document.getElementById(id);
-        // Toggle
-        contentId.style.display == "block" ? contentId.style.display = "none" :
-      contentId.style.display = "block";
+        const AllNames=["ATMGEO","HYDGEO","FYZ","CHE","BIO","ANJ"]
+        AllNames.forEach(iterate);
+        function iterate(name){
+          document.getElementById(name+"Label").setAttribute('class', 'UnSelectedpointer')
+          document.getElementById(name).style.display="none"
+        }
+        document.getElementById(id+"Label").setAttribute('class', 'SelectedPointer')
+        document.getElementById(id).style.display = "block";
+        if (id=="ATMGEO" || id=="HYDGEO") {
+          document.getElementById("dropdown-content").style.display="block";
+        }
+        else {
+          document.getElementById("dropdown-content").style.display="";
+        }
       }
     </script>
   </body>
