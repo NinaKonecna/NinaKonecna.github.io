@@ -63,6 +63,9 @@ h1{
   padding-left: 0;
   margin-left: calc(max(21vh,17%));
 }
+.content{
+  display: none;
+}
 .UnSelectedpointer:hover + #dropdown-content {
   display: block;
   background-color: #202020;
@@ -79,6 +82,7 @@ h2, label{
   -ms-user-select: none;
   user-select: none;
   color: #98c379;
+  margin-top:0;
   font-size: 3vh;
 }
 .UnSelectedpointer{
