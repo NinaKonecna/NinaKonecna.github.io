@@ -2,12 +2,23 @@
   bottom: 0%;
   right: 0%;
   position: fixed;
+  height: 4vh;
+  margin: 0;
+  padding: 0;
+}
+#InstagramImage{
+  width:4vh;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  bottom: 0%;
+  right:0%;
 }
 #Menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 30vh;
+  width: 25vh;
   background-color: #202020;
   position: fixed;
   height: 100%;
@@ -36,7 +47,7 @@ h1{
   -ms-user-select: none;
   user-select: none;
   color: #c6cccf;
-  font-size: 30px
+  font-size: 4vh
 }
 #dropdown-content {
   margin: 0;
@@ -50,7 +61,7 @@ h1{
   color:  #98c379;
   margin-left: 1vh;
   font-size: 2.5vh;
-  width: 20vh;
+  width: 10%;
 
 }
 .UnSelectedpointer:hover + #dropdown-content {
