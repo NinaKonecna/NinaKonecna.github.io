@@ -23,7 +23,7 @@
   position: fixed;
   height: 100%;
   overflow: auto;
-  min-width: 18vh;
+  min-width: 19vh;
 }
 
 #Menu label:hover {
@@ -68,22 +68,10 @@ h1{
   min-width: 15vh;
 
 }
-.content{
-  margin-left: 17%;
-  padding: 1px;
-}
-#MainText{
+#MainText, .content{
   padding: 1vh;
   padding-left: 0;
-  margin-left: 17%;
-}
-@media screen and ( max-width: 600px ){
-    #MainText{
-        margin-left: 20vh;
-    }
-    .content{
-      margin-left: 20vh;
-    }
+  margin-left: calc(max(21vh,17%));
 }
 .UnSelectedpointer:hover + #dropdown-content {
   display: block;
@@ -102,7 +90,7 @@ h2, label{
   -ms-user-select: none;
   user-select: none;
   color: #98c379;
-  font-size: 20px;
+  font-size: 3vh;
 }
 .pointer{
   cursor: pointer;
@@ -132,7 +120,7 @@ div{
 }
 li.default{
   color: rgb(200, 150, 100);
-  font-size:16px;
+  font-size: 2vh;
   margin-left: 0px;
   padding: 1px;
 }
