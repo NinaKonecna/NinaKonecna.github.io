@@ -12,6 +12,7 @@
   padding: 0;
   width: 15%;
   background-color: #202020;
+  box-shadow: 2px 7vh 10px 0px rgba(0, 0, 0, .3);
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -58,7 +59,14 @@ h1{
   min-width: 15vh;
 
 }
-#MainText, .content{
+#MainText{
+  width: 100%;
+  margin-top:0;
+  background-color: #202020;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .3);
+  height: calc(max(6vh,10%));
+}
+.content{
   padding: 1vh;
   padding-left: 0;
   margin-left: calc(max(21vh,17%));
