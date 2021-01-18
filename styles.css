@@ -33,6 +33,15 @@ body{
   font-family: sans-serif;
   background-color: #24292e;
 }
+#shroud{
+  width: 100%;
+  background-color:#202020;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .3);
+  height: 8vh;
+  text-align: center;
+}
 h1{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -40,6 +49,8 @@ h1{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin-top: 0vh;
+  padding-top: 2vh;
   color: #c6cccf;
   font-size: 4vh
 }
