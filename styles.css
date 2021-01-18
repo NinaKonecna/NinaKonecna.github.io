@@ -55,7 +55,7 @@ h1{
   color: #c6cccf;
   font-size: 4vh
 }
-#dropdown-content {
+#dropdown-content, #dropdown-content2 {
   margin: 0;
   padding: 0;
   padding-left: 5vh;
@@ -90,7 +90,12 @@ h1{
   background-color: #202020;
   color:  #98c379;
 }
-#dropdown-content:hover{
+.UnSelectedpointer:hover + #dropdown-content2 {
+  display: block;
+  background-color: #202020;
+  color:  #98c379;
+}
+#dropdown-content:hover, #dropdown-content2:hover{
   display: block;
 }
 h2, label{

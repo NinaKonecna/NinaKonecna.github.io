@@ -34,8 +34,7 @@
 
     <div id="MainText"><h1 style="padding: 1vh;padding-left: 1.5vh;margin:0">Archív - 1.A</h1></div>
     <ul id="Menu">
-      <li style="margin-top:2vh"><label id="ANJLabel" for="ANJButton" class="UnSelectedpointer"><b>Angličtina</b></label></li>
-      <li><label id="CHELabel" for="CHEButton" class="UnSelectedpointer"><b>Chémia</b></label></li>
+      <li style="margin-top:2vh"><label id="CHELabel" for="CHEButton" class="UnSelectedpointer"><b>Chémia</b></label></li>
       <li><label id="BIOLabel" for="BIOButton" class="UnSelectedpointer"><b>Biológia</b></label></li>
       <li><label id="FYZLabel" for="FYZButton" class="UnSelectedpointer"><b>Fyzikálne vzorce</b></label></li>
 
@@ -43,6 +42,12 @@
         <ul id="dropdown-content">
           <li><label id="HYDGEOLabel" for="HYDGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Hydrosféra</b></label></li>
           <li><label id="ATMGEOLabel" for="ATMGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Atmosféra</b></label></li>
+        </ul>
+      </li>
+      <li><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Jazyky</b></label>
+        <ul id="dropdown-content2">
+          <li><label id="ANJLabel" for="ANJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Angličtina</b></label></li>
+          <li><label id="RUJLabel" for="RUJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Ruština</b></label></li>
         </ul>
       </li>
 
@@ -53,6 +58,10 @@
       <h2>Angličtina</h2>
       <li class="default"><a href="sources/3.lekcia.pdf">Slová - 3. Lekcia</a></li>
       <li class="default"><a href="sources/anj_nepravidelne.pdf">Nepravidelné slová</a></li>
+    </div>
+    <div class="content" id="RUJ">
+      <h2>Ruština</h2>
+      <li class="default"><a href="sources/rujslova01.pdf">Slová - Dom, Bývanie</a></li>
     </div>
 
     <div class="content" id="CHE">
@@ -94,6 +103,7 @@
     <button onclick="toggleContent('ATMGEO')" id="ATMGEOButton" style="display:none"></button>
     <button onclick="toggleContent('ANJ')" id="ANJButton" style="display:none"></button>
     <button onclick="toggleContent('CHE')" id="CHEButton" style="display:none"></button>
+    <button onclick="toggleContent('RUJ')" id="RUJButton" style="display:none"></button>
 
 
 
@@ -118,7 +128,7 @@
     <a id="Instagram" href="https://www.instagram.com/ridigophoenix/"><img id="InstagramImage" src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt=""></a>
     <script>
       function toggleContent(id) {
-        const AllNames=["ATMGEO","HYDGEO","FYZ","CHE","BIO","ANJ"]
+        const AllNames=["ATMGEO","HYDGEO","FYZ","CHE","BIO","ANJ", "RUJ"]
         AllNames.forEach(iterate);
         function iterate(name){
           document.getElementById(name+"Label").setAttribute('class', 'UnSelectedpointer')
@@ -128,6 +138,9 @@
         document.getElementById(id).style.display = "block";
         if (id=="ATMGEO" || id=="HYDGEO") {
           document.getElementById("dropdown-content").style.display="block";
+        }
+        else if (id=="ANJ" || id=="RUJ") {
+          document.getElementById("dropdown-content2").style.display="block";
         }
         else {
           document.getElementById("dropdown-content").style.display="";
