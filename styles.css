@@ -71,6 +71,9 @@ h1{
   min-width: 15vh;
 
 }
+#dropdown-content{
+  z-index: 100;
+}
 #MainText{
   width: 100%;
   margin-top:0;
@@ -95,6 +98,7 @@ h1{
   background-color: #202020;
   color:  #98c379;
 }
+#MarginerEnabler:hover ~ #Marginer { margin:10vh 0 0 0 }
 #dropdown-content:hover, #dropdown-content2:hover{
   display: block;
 }

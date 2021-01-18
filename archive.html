@@ -38,13 +38,13 @@
       <li><label id="BIOLabel" for="BIOButton" class="UnSelectedpointer"><b>Biológia</b></label></li>
       <li><label id="FYZLabel" for="FYZButton" class="UnSelectedpointer"><b>Fyzikálne vzorce</b></label></li>
 
-      <li><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Geografia</b></label>
+      <li id="MarginerEnabler"><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Geografia</b></label>
         <ul id="dropdown-content">
           <li><label id="HYDGEOLabel" for="HYDGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Hydrosféra</b></label></li>
           <li><label id="ATMGEOLabel" for="ATMGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Atmosféra</b></label></li>
         </ul>
       </li>
-      <li><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Jazyky</b></label>
+      <li id="Marginer"><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Jazyky</b></label>
         <ul id="dropdown-content2">
           <li><label id="ANJLabel" for="ANJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Angličtina</b></label></li>
           <li><label id="RUJLabel" for="RUJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Ruština</b></label></li>
@@ -138,12 +138,18 @@
         document.getElementById(id).style.display = "block";
         if (id=="ATMGEO" || id=="HYDGEO") {
           document.getElementById("dropdown-content").style.display="block";
+          document.getElementById("dropdown-content2").style.display="";
+          document.getElementById("Marginer").style.margin="10vh 0 0 0";
         }
         else if (id=="ANJ" || id=="RUJ") {
           document.getElementById("dropdown-content2").style.display="block";
+          document.getElementById("dropdown-content").style.display="";
+          document.getElementById("Marginer").style.margin="";
         }
         else {
           document.getElementById("dropdown-content").style.display="";
+          document.getElementById("dropdown-content2").style.display="";
+          document.getElementById("Marginer").style.margin="";
         }
       }
     </script>
