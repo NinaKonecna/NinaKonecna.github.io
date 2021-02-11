@@ -28,6 +28,7 @@
           <li><label id="RUJLabel" for="RUJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Ruština</b></label></li>
         </ul>
       </li>
+      <li id="Marginerer"><label id="OTHLabel" for="OTHButton" class="UnSelectedpointer"><b>Ostatné</b></label></li>
 
     </ul>
 
@@ -93,6 +94,7 @@
     <button onclick="toggleContent('ANJ')" id="ANJButton" style="display:none"></button>
     <button onclick="toggleContent('CHE')" id="CHEButton" style="display:none"></button>
     <button onclick="toggleContent('RUJ')" id="RUJButton" style="display:none"></button>
+    <button onclick="toggleContent('OTH')" id="OTHButton" style="display:none"></button>
 
 
 
@@ -112,6 +114,10 @@
       <li class="default"><a href="sources/atmosfericke_procesy.pdf">Atmosferické procesy</a></li>
       <li class="default"><a href="sources/atmosfera.pdf">Atmosféra</a></li>
     </div>
+    <div class="content" id="OTH">
+      <h2>Ostatné</h2>
+
+    </div>
 
 
 
@@ -119,7 +125,7 @@
 
     <script>
       function toggleContent(id) {
-        const AllNames=["ATMGEO","HYDGEO","FYZ","CHE","BIO","ANJ", "RUJ"]
+        const AllNames=["ATMGEO","HYDGEO","FYZ","CHE","BIO","ANJ", "RUJ", "OTH"]
         AllNames.forEach(iterate);
         function iterate(name){
           document.getElementById(name+"Label").setAttribute('class', 'UnSelectedpointer')
@@ -131,16 +137,19 @@
           document.getElementById("dropdown-content").style.display="block";
           document.getElementById("dropdown-content2").style.display="";
           document.getElementById("Marginer").style.margin="11vh 0 0 0";
+          document.getElementById("Marginerer").style.margin="";
         }
         else if (id=="ANJ" || id=="RUJ") {
           document.getElementById("dropdown-content2").style.display="block";
           document.getElementById("dropdown-content").style.display="";
           document.getElementById("Marginer").style.margin="";
+          document.getElementById("Marginerer").style.margin="11vh 0 0 0";
         }
         else {
           document.getElementById("dropdown-content").style.display="";
           document.getElementById("dropdown-content2").style.display="";
           document.getElementById("Marginer").style.margin="";
+          document.getElementById("Marginerer").style.margin="";
         }
       }
     </script>
