@@ -20,6 +20,7 @@
         <ul id="dropdown-content">
           <li><label id="HYDGEOLabel" for="HYDGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Hydrosféra</b></label></li>
           <li><label id="ATMGEOLabel" for="ATMGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Atmosféra</b></label></li>
+          <li><label id="LITGEOLabel" for="LITGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Litosféra</b></label></li>
         </ul>
       </li>
       <li id="Marginer"><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Jazyky</b></label>
@@ -95,13 +96,18 @@
     <button onclick="toggleContent('CHE')" id="CHEButton" style="display:none"></button>
     <button onclick="toggleContent('RUJ')" id="RUJButton" style="display:none"></button>
     <button onclick="toggleContent('OTH')" id="OTHButton" style="display:none"></button>
+    <button onclick="toggleContent('LITGEO')" id="LITGEOButton" style="display:none"></button>
 
 
 
+    <div class="content" id="LITGEO">
+      <h2>Geografia - Litosféra</h2>
+      <li class="default"><a href="sources/endogenne.pdf">Endogénne procesy</a></li>
+      <li class="default"><a href="sources/litosfera.pdf">Litosféra <b>DÚ</b></a></li>
+    </div>
 
     <div class="content" id="HYDGEO">
       <h2>Geografia - Hydrosféra</h2>
-      <li class="default"><a href="sources/litosfera.pdf">Litosféra <b>DÚ</b></a></li>
       <li class="default"><a href="sources/voda.pdf">Podzemná voda + pojmy vody</a></li>
       <li class="default"><a href="sources/JazeraNadrze.pdf">Jazerá a vodné nádrže</a></li>
       <li class="default"><a href="sources/vlastnostimora.pdf">Fyzikálne a chemické vlastnosti morskej vody</a></li>
@@ -116,6 +122,10 @@
     </div>
     <div class="content" id="OTH">
       <h2>Ostatné</h2>
+      <h3 class="OTHCategory">Matematika</h3>
+      <ul>
+        <li>Vzorce - Mocniny, odmocniny</li>
+      </ul>
 
     </div>
 
@@ -125,7 +135,7 @@
 
     <script>
       function toggleContent(id) {
-        const AllNames=["ATMGEO","HYDGEO","FYZ","CHE","BIO","ANJ", "RUJ", "OTH"]
+        const AllNames=["ATMGEO","HYDGEO","FYZ","CHE","BIO","ANJ", "RUJ", "OTH", "LITGEO"]
         AllNames.forEach(iterate);
         function iterate(name){
           document.getElementById(name+"Label").setAttribute('class', 'UnSelectedpointer')
@@ -133,10 +143,10 @@
         }
         document.getElementById(id+"Label").setAttribute('class', 'SelectedPointer')
         document.getElementById(id).style.display = "block";
-        if (id=="ATMGEO" || id=="HYDGEO") {
+        if (id=="ATMGEO" || id=="HYDGEO" || id=="LITGEO") {
           document.getElementById("dropdown-content").style.display="block";
           document.getElementById("dropdown-content2").style.display="";
-          document.getElementById("Marginer").style.margin="11vh 0 0 0";
+          document.getElementById("Marginer").style.margin="14vh 0 0 0";
           document.getElementById("Marginerer").style.margin="";
         }
         else if (id=="ANJ" || id=="RUJ") {
