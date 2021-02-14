@@ -1,0 +1,147 @@
+#Menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #202020;
+  box-shadow: 2px 8px 10px 0px rgba(0, 0, 0, .3);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  min-width: 25vh;
+}
+
+#Menu label:hover {
+  background-color: #98c379;
+  color: #202020
+}
+a:link {
+  color: rgb(255, 0, 0);
+}
+a:visited{
+  color:rgba(0, 255, 0);
+}
+body{
+  font-family: sans-serif;
+  background-color: #24292e;
+  margin: 0;
+}
+#shroud{
+  width: 100%;
+  background-color:#202020;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .3);
+  height: 8vh;
+  text-align: center;
+}
+h1{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 0vh;
+  padding-top: 2vh;
+  color: #c6cccf;
+  font-size: 4vh
+}
+#GEOMENU, #BIOMENU, #JAZMENU {
+  margin: 0;
+  padding: 0;
+  padding-left: 5vh;
+  display: none;
+  box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, .2);
+  background-color: #202020;
+  position: fixed;
+  color:  #98c379;
+  margin-left: 1vh;
+  font-size: 2.5vh;
+  width: 10%;
+  text-align: center;
+  min-width: 15vh;
+
+}
+#BIOMENU{
+    width: 10%;
+    min-width: 20vh;
+}
+#GEOMENU{
+  z-index: 100;
+}
+#MainText{
+  width: 100%;
+  margin-top:0;
+  background-color: #202020;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .3);
+  height: calc(max(6vh,10%));
+}
+.content{
+  padding: 1vh;
+  padding-left: 0;
+  margin-left: calc(max(27vh,17%));
+  margin-top: 2vh;
+  display: none;
+}
+.OTHCategory{
+  color:yellow;
+  font-size: 2vh;
+}
+/*.UnSelectedpointer:hover + #GEOMENU {
+  display: block;
+  background-color: #202020;
+  color:  #98c379;
+}
+
+.UnSelectedpointer:hover + #BIOMENU {
+  display: block;
+  background-color: #202020;
+  color:  #98c379;
+}
+.UnSelectedpointer:hover + #JAZMENU {
+  display: block;
+  background-color: #202020;
+  color:  #98c379;
+}
+#MarginerEnabler:hover ~ #Marginer { margin:15vh 0 0 0 }
+#Marginer:hover ~ #Marginerer { margin:15vh 0 0 0 }
+#Marginerer:hover ~ #Marginererer { margin:11vh 0 0 0 }
+#GEOMENU:hover, #BIOMENU:hover, #JAZMENU:hover{
+  display: block;
+}*/
+h2, label{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #98c379;
+  margin-top:0;
+  font-size: 3vh;
+}
+.UnSelectedpointer{
+  cursor: pointer;
+  display: block;
+  background-color: #202020;
+  padding: 1vh 2vh;
+  text-decoration: none;
+  color: #98c379;
+  font-size:2.5vh;
+}
+.SelectedPointer{
+  cursor: pointer;
+  display: block;
+  background-color: #98c379;
+  padding: 1vh 2vh;
+  text-decoration: none;
+  color: #000000;
+  font-size:2.5vh;
+}
+li.default{
+  color: rgb(200, 150, 100);
+  font-size: 2vh;
+  margin-left: 0px;
+  padding: 1px;
+}
