@@ -13,7 +13,6 @@
     <div id="MainText"><h1 style="padding: 1vh;padding-left: 1.5vh;margin:0">Archív - 1.A</h1></div>
     <ul id="Menu">
       <li style="margin-top:2vh"><label id="CHELabel" for="CHEButton" class="UnSelectedpointer"><b>Chémia</b></label></li>
-      <li><label id="BIOLabel" for="BIOButton" class="UnSelectedpointer"><b>Biológia</b></label></li>
       <li><label id="FYZLabel" for="FYZButton" class="UnSelectedpointer"><b>Fyzika</b></label></li>
 
       <li id="MarginerEnabler"><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Geografia</b></label>
@@ -23,13 +22,20 @@
           <li><label id="LITGEOLabel" for="LITGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Litosféra</b></label></li>
         </ul>
       </li>
-      <li id="Marginer"><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Jazyky</b></label>
+      <li id="Marginer"><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Biológia</b></label>
         <ul id="dropdown-content2">
+          <li><label id="BIOZIVLabel" for="BIOZIVButton" class="UnSelectedpointer" style="font-size:2vh"><b>Ríša živočíchov</b></label></li>
+          <li><label id="BIORASTLabel" for="BIORASTButton" class="UnSelectedpointer" style="font-size:2vh"><b>Ríša rastlín</b></label></li>
+          <li><label id="BIOJEDNLabel" for="BIOJEDNButton" class="UnSelectedpointer" style="font-size:2vh"><b>Jednobunkovce</b></label></li>
+        </ul>
+      </li>
+      <li id="Marginerer"><label class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Jazyky</b></label>
+        <ul id="dropdown-content3">
           <li><label id="ANJLabel" for="ANJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Angličtina</b></label></li>
           <li><label id="RUJLabel" for="RUJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Ruština</b></label></li>
         </ul>
       </li>
-      <li id="Marginerer"><label id="OTHLabel" for="OTHButton" class="UnSelectedpointer"><b>Ostatné</b></label></li>
+      <li id="Marginererer"><label id="OTHLabel" for="OTHButton" class="UnSelectedpointer"><b>Ostatné</b></label></li>
 
     </ul>
 
@@ -61,13 +67,18 @@
       <li class="default"><a href="sources/atom.pdf">Atóm</a></li>
 
     </div>
-    <div class="content" id="BIO">
-      <h2>Biológia</h2>
+
+    <div class="content" id="BIOZIV">
+      <h2>Biológia - Ríša živočíchov</h2>
+      <li class="default"><a href="sources/Imunita.pdf">Imunitný systém</a></li>
       <li class="default"><a href="sources/ploskavce.pdf">Ploskavce</a></li>
       <li class="default"><a href="sources/prhlivce.pdf">Prhlivce</a></li>
       <li class="default"><a href="sources/hubky2.pdf">Hubky - PL</a></li>
       <li class="default"><a href="sources/hubky.pdf">Hubky</a></li>
       <li class="default"><a href="sources/syszivocichov.pdf">Systém živočíchov</a></li>
+    </div>
+    <div class="content" id="BIORAST">
+      <h2>Biológia - Ríša rastlín</h2>
       <li class="default"><a href="sources/GMO.pdf">GMO - Geneticky modifikované potraviny</a></li>
       <li class="default"><a href="sources/Huby2.pdf">Huby 2</a></li>
       <li class="default"><a href="sources/huby.pdf">Huby</a></li>
@@ -78,11 +89,14 @@
       <li class="default"><a href="sources/oddelenia_vyssie.pdf">Oddelenia vyšších rastlín</a></li>
       <li class="default"><a href="sources/riasy.pdf">Riasy</a></li>
       <li class="default"><a href="sources/system_rastlin.pdf">Systém rastlín</a></li>
+    </div>
+    <div class="content" id="BIOJEDN">
+      <h2>Biológia - Jednobunkovce</h2>
       <li class="default"><a href="sources/jednobunkovce.pdf">Jednobunkovce</a></li>
       <li class="default"><a href="sources/Bakterie.pdf">Baktérie <b>NEDOKONČENÉ!</b></a></li>
       <li class="default"><a href="sources/Vírusy.pdf">Vírusy</a></li>
-
     </div>
+
     <div class="content" id="FYZ">
         <h2>Fyzika</h2>
         <li class="default"><a href="sources/vodorovny_vrh.pdf">Vodorovný vrh</a></li>
@@ -92,7 +106,9 @@
     </div>
 
 
-    <button onclick="toggleContent('BIO')" id="BIOButton" style="display:none"></button>
+    <button onclick="toggleContent('BIOJEDN')" id="BIOJEDNButton" style="display:none"></button>
+    <button onclick="toggleContent('BIOZIV')" id="BIOZIVButton" style="display:none"></button>
+    <button onclick="toggleContent('BIORAST')" id="BIORASTButton" style="display:none"></button>
     <button onclick="toggleContent('FYZ')" id="FYZButton" style="display:none"></button>
     <button onclick="toggleContent('HYDGEO')" id="HYDGEOButton" style="display:none"></button>
     <button onclick="toggleContent('ATMGEO')" id="ATMGEOButton" style="display:none"></button>
@@ -139,7 +155,7 @@
 
     <script>
       function toggleContent(id) {
-        const AllNames=["ATMGEO","HYDGEO","FYZ","CHE","BIO","ANJ", "RUJ", "OTH", "LITGEO"]
+        const AllNames=["ATMGEO","HYDGEO","FYZ","CHE","BIOZIV","BIORAST","BIOJEDN","ANJ", "RUJ", "OTH", "LITGEO"]
         AllNames.forEach(iterate);
         function iterate(name){
           document.getElementById(name+"Label").setAttribute('class', 'UnSelectedpointer')
@@ -147,23 +163,37 @@
         }
         document.getElementById(id+"Label").setAttribute('class', 'SelectedPointer')
         document.getElementById(id).style.display = "block";
-        if (id=="ATMGEO" || id=="HYDGEO" || id=="LITGEO") {
-          document.getElementById("dropdown-content").style.display="block";
-          document.getElementById("dropdown-content2").style.display="";
-          document.getElementById("Marginer").style.margin="15vh 0 0 0";
-          document.getElementById("Marginerer").style.margin="";
-        }
-        else if (id=="ANJ" || id=="RUJ") {
+        if (id=="BIOZIV" || id=="BIORAST" || id=="BIOJEDN") {
           document.getElementById("dropdown-content2").style.display="block";
+          document.getElementById("dropdown-content3").style.display="";
           document.getElementById("dropdown-content").style.display="";
           document.getElementById("Marginer").style.margin="";
-          document.getElementById("Marginerer").style.margin="11vh 0 0 0";
+          document.getElementById("Marginerer").style.margin="15vh 0 0 0";
+          document.getElementById("Marginererer").style.margin="";
+        }
+        else if (id=="ATMGEO" || id=="HYDGEO" || id=="LITGEO") {
+          document.getElementById("dropdown-content").style.display="block";
+          document.getElementById("dropdown-content2").style.display="";
+          document.getElementById("dropdown-content3").style.display="";
+          document.getElementById("Marginer").style.margin="15vh 0 0 0";
+          document.getElementById("Marginerer").style.margin="";
+          document.getElementById("Marginererer").style.margin="";
+        }
+        else if (id=="ANJ" || id=="RUJ") {
+          document.getElementById("dropdown-content3").style.display="block";
+          document.getElementById("dropdown-content2").style.display="";
+          document.getElementById("dropdown-content").style.display="";
+          document.getElementById("Marginer").style.margin="";
+          document.getElementById("Marginerer").style.margin="";
+          document.getElementById("Marginererer").style.margin="11vh 0 0 0";
         }
         else {
           document.getElementById("dropdown-content").style.display="";
           document.getElementById("dropdown-content2").style.display="";
+          document.getElementById("dropdown-content3").style.display="";
           document.getElementById("Marginer").style.margin="";
           document.getElementById("Marginerer").style.margin="";
+          document.getElementById("Marginererer").style.margin="";
         }
       }
     </script>

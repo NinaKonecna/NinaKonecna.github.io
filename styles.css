@@ -8,7 +8,7 @@
   position: fixed;
   height: 100%;
   overflow: auto;
-  min-width: 19vh;
+  min-width: 25vh;
 }
 
 #Menu label:hover {
@@ -47,7 +47,7 @@ h1{
   color: #c6cccf;
   font-size: 4vh
 }
-#dropdown-content, #dropdown-content2 {
+#dropdown-content, #dropdown-content2, #dropdown-content3 {
   margin: 0;
   padding: 0;
   padding-left: 5vh;
@@ -63,6 +63,10 @@ h1{
   min-width: 15vh;
 
 }
+#dropdown-content2{
+    width: 10%;
+    min-width: 20vh;
+}
 #dropdown-content{
   z-index: 100;
 }
@@ -76,7 +80,7 @@ h1{
 .content{
   padding: 1vh;
   padding-left: 0;
-  margin-left: calc(max(21vh,17%));
+  margin-left: calc(max(27vh,17%));
   margin-top: 2vh;
   display: none;
 }
@@ -94,9 +98,15 @@ h1{
   background-color: #202020;
   color:  #98c379;
 }
+.UnSelectedpointer:hover + #dropdown-content3 {
+  display: block;
+  background-color: #202020;
+  color:  #98c379;
+}
 #MarginerEnabler:hover ~ #Marginer { margin:15vh 0 0 0 }
-#Marginer:hover ~ #Marginerer { margin:11vh 0 0 0 }
-#dropdown-content:hover, #dropdown-content2:hover{
+#Marginer:hover ~ #Marginerer { margin:15vh 0 0 0 }
+#Marginerer:hover ~ #Marginererer { margin:11vh 0 0 0 }
+#dropdown-content:hover, #dropdown-content2:hover, #dropdown-content3:hover{
   display: block;
 }
 h2, label{
