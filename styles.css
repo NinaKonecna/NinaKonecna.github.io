@@ -94,7 +94,7 @@ h1{
   background-color: #202020;
   color:  #98c379;
 }
-#MarginerEnabler:hover ~ #Marginer { margin:14vh 0 0 0 }
+#MarginerEnabler:hover ~ #Marginer { margin:15vh 0 0 0 }
 #Marginer:hover ~ #Marginerer { margin:11vh 0 0 0 }
 #dropdown-content:hover, #dropdown-content2:hover{
   display: block;
