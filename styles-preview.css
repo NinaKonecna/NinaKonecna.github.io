@@ -84,6 +84,13 @@ h1{
   margin-top: 2vh;
   display: none;
 }
+#Vote{
+  margin-left: calc(max(27vh,17%));
+  position: absolute;
+  right: 0px;
+  width: 500px;
+  height: 400px;
+}
 .OTHCategory{
   color:yellow;
   font-size: 2vh;
