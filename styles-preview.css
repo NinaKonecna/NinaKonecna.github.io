@@ -88,8 +88,8 @@ h1{
   margin-left: calc(max(27vh,17%));
   position: absolute;
   right: 0px;
-  width: 500px;
-  height: 400px;
+  width: 70vh;
+  height: 60vh;
 }
 .OTHCategory{
   color:yellow;
