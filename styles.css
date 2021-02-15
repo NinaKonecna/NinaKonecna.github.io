@@ -47,7 +47,7 @@ h1{
   color: #c6cccf;
   font-size: 4vh
 }
-#dropdown-content, #dropdown-content2, #dropdown-content3 {
+#GEOMENU, #BIOMENU, #JAZMENU {
   margin: 0;
   padding: 0;
   padding-left: 5vh;
@@ -63,11 +63,11 @@ h1{
   min-width: 15vh;
 
 }
-#dropdown-content2{
+#BIOMENU{
     width: 10%;
     min-width: 20vh;
 }
-#dropdown-content{
+#GEOMENU{
   z-index: 100;
 }
 #MainText{
@@ -84,21 +84,29 @@ h1{
   margin-top: 2vh;
   display: none;
 }
-.UnSelectedpointer:hover + #dropdown-content {
-  display: block;
-  background-color: #202020;
-  color:  #98c379;
+#Vote{
+  margin-left: calc(max(27vh,17%));
+  position: absolute;
+  right: 0px;
+  width: 70vh;
+  height: 100%;
 }
 .OTHCategory{
   color:yellow;
   font-size: 2vh;
 }
-.UnSelectedpointer:hover + #dropdown-content2 {
+/*.UnSelectedpointer:hover + #GEOMENU {
   display: block;
   background-color: #202020;
   color:  #98c379;
 }
-.UnSelectedpointer:hover + #dropdown-content3 {
+
+.UnSelectedpointer:hover + #BIOMENU {
+  display: block;
+  background-color: #202020;
+  color:  #98c379;
+}
+.UnSelectedpointer:hover + #JAZMENU {
   display: block;
   background-color: #202020;
   color:  #98c379;
@@ -106,9 +114,9 @@ h1{
 #MarginerEnabler:hover ~ #Marginer { margin:15vh 0 0 0 }
 #Marginer:hover ~ #Marginerer { margin:15vh 0 0 0 }
 #Marginerer:hover ~ #Marginererer { margin:11vh 0 0 0 }
-#dropdown-content:hover, #dropdown-content2:hover, #dropdown-content3:hover{
+#GEOMENU:hover, #BIOMENU:hover, #JAZMENU:hover{
   display: block;
-}
+}*/
 h2, label{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
