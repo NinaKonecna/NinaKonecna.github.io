@@ -89,7 +89,7 @@ h1{
   position: absolute;
   right: 0px;
   width: 70vh;
-  height: 60vh;
+  height: 100%;
 }
 .OTHCategory{
   color:yellow;
