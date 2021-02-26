@@ -2,13 +2,13 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 15%;
+  width: 13%;
   background-color: #202020;
-  box-shadow: 2px 8px 10px 0px rgba(0, 0, 0, .3);
+  box-shadow: 2px 55px 10px 0px rgba(0, 0, 0, .3);
   position: fixed;
   height: 100%;
   overflow: auto;
-  min-width: 25vh;
+  min-width: 22vh;
 }
 
 #Menu label:hover {
@@ -75,12 +75,13 @@ h1{
   margin-top:0;
   background-color: #202020;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .3);
-  height: calc(max(6vh,10%));
+  height: 10%;
+  min-height: 7vh;
 }
 .content{
   padding: 1vh;
   padding-left: 0;
-  margin-left: calc(max(27vh,17%));
+  margin-left: calc(max(25vh,15%));
   margin-top: 2vh;
   display: none;
 }
