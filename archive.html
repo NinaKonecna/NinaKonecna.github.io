@@ -39,7 +39,8 @@
           <li><label id="NEJLabel" for="NEJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Nemčina</b></label></li>
         </ul>
       </li>
-      <li id="Marginererer"><label id="OTHLabel" for="OTHButton" class="UnSelectedpointer"><b>Ostatné</b></label></li>
+      <li id="Marginererer"><label id="MATLabel" for="MATButton" class="UnSelectedpointer"><b>Matematika</b></label></li>
+      <li><label id="OTHLabel" for="OTHButton" class="UnSelectedpointer"><b>Ostatné</b></label></li>
 
     </ul>
     <div id="MainText"></div>
@@ -142,6 +143,7 @@
 
     </div>
 
+    <button onclick="toggleContent('MAT')" id="MATButton" style="display:none"></button>
     <button onclick="toggleContent('JAZMENU')" id="JAZMENUButton" style="display:none"></button>
     <button onclick="toggleContent('BIOMENU')" id="BIOMENUButton" style="display:none"></button>
     <button onclick="toggleContent('GEOMENU')" id="GEOMENUButton" style="display:none"></button>
@@ -170,6 +172,13 @@
       <li class="default"><a href="sources/litosfera.pdf">Litosféra</a></li>
     </div>
 
+    <div class="content" id="MAT">
+      <h2>Matematika</h2>
+      <li class="default"><a href="sources/mat_dur.pdf">Dôsledkove úpravy rovníc</a></li>
+      <li class="default"><a href="sources/EkvivalentneUpravy.pdf">Ekvivalentné úpravy rovníc a nerovníc</a></li>
+      <li class="default"><a href="sources/mocniny__odmocniny.pdf">Vzorce - Mocniny, Odmocniny</a></li>
+    </div>
+
     <div class="content" id="HYDGEO">
       <h2>Geografia - Hydrosféra</h2>
       <li class="default"><a href="sources/voda.pdf">Podzemná voda + pojmy vody</a></li>
@@ -186,12 +195,6 @@
     </div>
     <div class="content" id="OTH">
       <h2>Ostatné</h2>
-      <h3 class="OTHCategory">Matematika</h3>
-      <ul>
-        <li class="default"><a href="sources/mat_dur.pdf">Dôsledkove úpravy rovníc</a></li>
-        <li class="default"><a href="sources/EkvivalentneUpravy.pdf">Ekvivalentné úpravy rovníc a nerovníc</a></li>
-        <li class="default"><a href="sources/mocniny__odmocniny.pdf">Vzorce - Mocniny, Odmocniny</a></li>
-      </ul>
       <h3 class="OTHCategory">Ljubizny Autor</h3>
       <ul>
         <li class="default"><a href="sources/nemecko.jpeg">Nemecko</a></li>
@@ -208,7 +211,7 @@
 
     <script>
       function toggleContent(id) {
-        const AllNames=["ATMGEO","HYDGEO","FYZ","CHE","BIOZIV","BIORAST","BIOJEDN","ANJ", "RUJ", "NEJ", "OTH", "LITGEO", "BIOMENU", "GEOMENU", "JAZMENU"]
+        const AllNames=["ATMGEO","MAT","HYDGEO","FYZ","CHE","BIOZIV","BIORAST","BIOJEDN","ANJ", "RUJ", "NEJ", "OTH", "LITGEO", "BIOMENU", "GEOMENU", "JAZMENU"]
         AllNames.forEach(iterate);
         function iterate(name){
           document.getElementById(name+"Label").setAttribute('class', 'UnSelectedpointer')
