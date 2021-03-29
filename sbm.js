@@ -1,6 +1,4 @@
-
 phrase="aHVieQ=="
-
 function sbm2(){
   document.getElementById("checker").onkeyup = function(e){
     if(e.keyCode == 13){
