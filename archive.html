@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="sbm.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archív - 1.A</title>
@@ -10,6 +11,9 @@
   <body>
 
 <!---->
+
+
+
 
     <ul id="Menu">
       <li><h1 style="font-size: 3vh; padding: 1vh;padding-left: 1.5vh;margin:0; margin-top:1vh">Archív - 1.A</h1></li>
@@ -43,6 +47,16 @@
       <li><label id="OTHLabel" for="OTHButton" class="UnSelectedpointer"><b>Ostatné</b></label></li>
 
     </ul>
+
+    <div id="Blocker" style="width:100%; height:100%; background-color:rgba(0,0,0,0.5); position:absolute">
+      <div id="Form" style="min-width: 40vh; width:20%; height:60%; background-color:#24292e; left: 40%; top:20%; position:absolute; box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, .3);">
+        <h1 style="font-size: 3vh; padding: 1vh;padding-left: 1.5vh;padding-top: 2vh; padding-bottom: 2vh; text-align: center;background-color: #202020; box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .3); height: 7%; min-height: 4vh;">Archív - 1.A</h1>
+        <h2 style="margin:3vh 0 0 5%">Heslo: </h2>
+        <input onkeyup="sbm2()" id="checker" style="display: block; margin:auto; margin-top:2vh; width:90%; height:10%; font-size:5vh" type="password" value="">
+        <input onclick="sbm()" style="display: block; margin-right: 5%;margin-left: auto; margin-top:2vh; width:5vw; height:5%; font-size:1vw; text-align:center" type="button" value="Potvrdiť">
+      </div>
+    </div>
+
     <div id="MainText"></div>
     <div class="content" id="ANJ">
       <h2>Angličtina</h2>
