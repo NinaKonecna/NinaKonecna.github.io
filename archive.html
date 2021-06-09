@@ -21,6 +21,7 @@
 
       <li id="MarginerEnabler"><label id="GEOMENULabel" for="GEOMENUButton" class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Geografia</b></label>
         <ul id="GEOMENU">
+          <li><label id="BIOGEOLabel" for="BIOGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Biosféra</b></label></li>
           <li><label id="PEDGEOLabel" for="PEDGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Pedosféra</b></label></li>
           <li><label id="LITGEOLabel" for="LITGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Litosféra</b></label></li>
           <li><label id="HYDGEOLabel" for="HYDGEOButton" class="UnSelectedpointer" style="font-size:2vh"><b>Hydrosféra</b></label></li>
@@ -113,7 +114,6 @@
       <h2>Biológia - Ríša živočíchov</h2>
       <li class="default"><a href="sources/cicavce.pdf">Cicavce</a></li>
       <li class="default"><a href="sources/poznavacka_ziv.pdf">Poznavačka 1</a></li>
-      <li class="default"><a href="sources/poznavacka_ziv2.pdf">Poznavačka 2</a></li>
       <li class="default"><a href="sources/Vtáky.pdf">Vtáky</a></li>
       <li class="default"><a href="sources/Plazy.pdf">Plazy</a></li>
       <li class="default"><a href="sources/Obojzivelniky.pdf">Obojživelniky</a></li>
@@ -195,6 +195,7 @@
     <button onclick="toggleContent('BIOZIV')" id="BIOZIVButton" style="display:none"></button>
     <button onclick="toggleContent('BIORAST')" id="BIORASTButton" style="display:none"></button>
     <button onclick="toggleContent('FYZ')" id="FYZButton" style="display:none"></button>
+    <button onclick="toggleContent('BIOGEO')" id="BIOGEOButton" style="display:none"></button>
     <button onclick="toggleContent('HYDGEO')" id="HYDGEOButton" style="display:none"></button>
     <button onclick="toggleContent('ATMGEO')" id="ATMGEOButton" style="display:none"></button>
     <button onclick="toggleContent('ANJ')" id="ANJButton" style="display:none"></button>
@@ -206,7 +207,10 @@
     <button onclick="toggleContent('PEDGEO')" id="PEDGEOButton" style="display:none"></button>
 
 
-
+    <div class="content" id="BIOGEO">
+      <h2>Geografia - Biosféra</h2>
+      <li class="default"><a href="sources/Biosfera.pdf">Biosféra</a></li>
+    </div>
     <div class="content" id="PEDGEO">
       <h2>Geografia - Pedosféra</h2>
       <li class="default"><a href="sources/slepamapa.pdf">Slepá mapa</a></li>
@@ -228,6 +232,7 @@
 
     <div class="content" id="MAT">
       <h2>Matematika</h2>
+      <li class="default"><a href="sources/kvad_nerovnica.pdf">Kvadratická nerovnica </a></li>
       <li class="default"><a href="sources/uprava_do_stvorca.pdf">Uprava do štvorca </a></li>
       <li class="default"><a href="sources/kvad_funkcia.pdf">Kvadratická funkcia </a></li>
       <li class="default"><a href="sources/nepriama_umernost.pdf">Funkcia nepriamej umernosti </a></li>
@@ -278,7 +283,7 @@
 
     <script>
       function toggleContent(id) {
-        const AllNames=["ATMGEO","MAT","HYDGEO","FYZ","CHE","BIOZIV","BIORAST","BIOJEDN","ANJ", "RUJ", "NEJ", "OTH", "LITGEO", "BIOMENU", "GEOMENU", "JAZMENU","PEDGEO"]
+        const AllNames=["ATMGEO","MAT","BIOGEO","HYDGEO","FYZ","CHE","BIOZIV","BIORAST","BIOJEDN","ANJ", "RUJ", "NEJ", "OTH", "LITGEO", "BIOMENU", "GEOMENU", "JAZMENU","PEDGEO"]
         AllNames.forEach(iterate);
         function iterate(name){
           document.getElementById(name+"Label").setAttribute('class', 'UnSelectedpointer')
@@ -298,7 +303,7 @@
           document.getElementById("GEOMENU").style.display="block";
           document.getElementById("BIOMENU").style.display="";
           document.getElementById("JAZMENU").style.display="";
-          document.getElementById("Marginer").style.margin="19vh 0 0 0";
+          document.getElementById("Marginer").style.margin="23vh 0 0 0";
           document.getElementById("Marginerer").style.margin="";
           document.getElementById("Marginererer").style.margin="";
         }
@@ -318,11 +323,11 @@
           document.getElementById("Marginerer").style.margin="15vh 0 0 0";
           document.getElementById("Marginererer").style.margin="";
         }
-        else if (id=="ATMGEO" || id=="HYDGEO" || id=="LITGEO" || id=="PEDGEO") {
+        else if (id=="ATMGEO" || id=="HYDGEO" || id=="LITGEO" || id=="PEDGEO" || id=="BIOGEO") {
           document.getElementById("GEOMENU").style.display="block";
           document.getElementById("BIOMENU").style.display="";
           document.getElementById("JAZMENU").style.display="";
-          document.getElementById("Marginer").style.margin="19vh 0 0 0";
+          document.getElementById("Marginer").style.margin="23vh 0 0 0";
           document.getElementById("Marginerer").style.margin="";
           document.getElementById("Marginererer").style.margin="";
         }
