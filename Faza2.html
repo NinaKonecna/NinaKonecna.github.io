@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="sbm.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faza 2</title>
+  </head>
+  <body>
+
+<!---->
+
+
+
+
+    <ul id="Menu">
+      <li><h1 style="font-size: 3vh; padding: 1vh;padding-left: 1.5vh;margin:0; margin-top:1vh">Faza 2</h1></li>
+      <li style="margin-top:2vh"><label id="CHELabel" for="CHEButton" class="UnSelectedpointer"><b>Chémia</b></label></li>
+      <li><label id="FYZLabel" for="FYZButton" class="UnSelectedpointer"><b>Fyzika</b></label></li>
+
+      <li id="MarginerEnabler"><label id="GEOLabel" for="GEOButton" class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Geografia</b></label></li>
+      <li id="Marginer"><label id="BIOLabel" for="BIOButton" class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Biológia</b></label></li>
+      <li id="Marginerer"><label id="JAZMENULabel" for="JAZMENUButton" class="UnSelectedpointer"><b><i class="fa fa-caret-down"></i> Jazyky</b></label>
+        <ul id="JAZMENU">
+          <li><label id="ANJLabel" for="ANJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Angličtina</b></label></li>
+          <li><label id="RUJLabel" for="RUJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Ruština</b></label></li>
+          <li><label id="NEJLabel" for="NEJButton" class="UnSelectedpointer" style="font-size:2vh"><b>Nemčina</b></label></li>
+        </ul>
+      </li>
+      <li id="Marginererer"><label id="MATLabel" for="MATButton" class="UnSelectedpointer"><b>Matematika</b></label></li>
+      <li><label id="OTHLabel" for="OTHButton" class="UnSelectedpointer"><b>Ostatné</b></label></li>
+
+    </ul>
+
+    <div id="Blocker" style="width:100%; height:100%; background-color:rgba(0,0,0,0.5); position:absolute">
+      <div id="Form" style="min-width: 40vh; width:20%; height:60%; background-color:#24292e; left: 40%; top:20%; position:absolute; box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, .3);">
+        <h1 style="font-size: 3vh; padding: 1vh;padding-left: 1.5vh;padding-top: 2vh; padding-bottom: 2vh; text-align: center;background-color: #202020; box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .3); height: 7%; min-height: 4vh;">Archív - 1.A</h1>
+        <h2 style="margin:3vh 0 0 5%">Heslo: </h2>
+        <input onkeyup="sbm4()" id="checker" style="display: block; margin:auto; margin-top:2vh; width:90%; height:10%; font-size:5vh" type="password" value="">
+        <input onclick="sbm3()" style="display: block; margin-right: 5%;margin-left: auto; margin-top:2vh; width:5vw; height:5%; font-size:1vw; text-align:center" type="button" value="Potvrdiť">
+      </div>
+    </div>
+
+
+    <div id="MainText"></div>
+    <img id="bg-image" src="Logos/logonames.png" alt="">
+    <div class="content" id="ANJ">
+      <h2>Angličtina</h2>
+
+    </div>
+    <div class="content" id="RUJ">
+      <h2>Ruština</h2>
+
+    </div>
+    <div class="content" id="NEJ">
+      <h2>Nemčina</h2>
+
+    </div>
+
+    <div class="content" id="CHE">
+      <h2>Chémia</h2>
+
+    </div>
+
+    <div class="content" id="BIO">
+      <h2>Biológia</h2>
+
+    </div>
+
+
+    <div class="content" id="FYZ">
+        <h2>Fyzika</h2>
+
+    </div>
+
+    <button onclick="toggleContent('MAT')" id="MATButton" style="display:none"></button>
+    <button onclick="toggleContent('JAZMENU')" id="JAZMENUButton" style="display:none"></button>
+    <button onclick="toggleContent('BIO')" id="BIOButton" style="display:none"></button>
+    <button onclick="toggleContent('GEO')" id="GEOButton" style="display:none"></button>
+    <button onclick="toggleContent('FYZ')" id="FYZButton" style="display:none"></button>
+    <button onclick="toggleContent('ANJ')" id="ANJButton" style="display:none"></button>
+    <button onclick="toggleContent('CHE')" id="CHEButton" style="display:none"></button>
+    <button onclick="toggleContent('RUJ')" id="RUJButton" style="display:none"></button>
+    <button onclick="toggleContent('NEJ')" id="NEJButton" style="display:none"></button>
+    <button onclick="toggleContent('OTH')" id="OTHButton" style="display:none"></button>
+
+
+
+    <div class="content" id="GEO">
+      <h2>Geografia</h2>
+
+    </div>
+
+    <div class="content" id="MAT">
+      <h2>Matematika</h2>
+
+    </div>
+
+
+
+    <div class="content" id="OTH">
+      <h2>Ostatné</h2>
+      <h3 class="OTHCategory">Ljubizny Autor</h3>
+      <ul>
+        <li class="default"><a href="sources1.A/7dovodov.pdf">čo je táto stránka?</a></li>
+        <li class="default"><a href="sources1.A/nemecko.jpeg">Nemecko</a></li>
+      </ul>
+    </div>
+
+
+
+
+
+    <script>
+      function toggleContent(id) {
+        const AllNames=["MAT","FYZ","CHE","ANJ","NEJ", "RUJ", "OTH", "BIO", "GEO", "JAZMENU"]
+        AllNames.forEach(iterate);
+        function iterate(name){
+          document.getElementById(name+"Label").setAttribute('class', 'UnSelectedpointer')
+          document.getElementById(name).style.display="none"
+        }
+        document.getElementById(id+"Label").setAttribute('class', 'SelectedPointer')
+        document.getElementById(id).style.display = "block";
+        if (id=="JAZMENU"){
+          document.getElementById("JAZMENU").style.display="block";
+          document.getElementById("Marginer").style.margin="";
+          document.getElementById("Marginerer").style.margin="";
+          document.getElementById("Marginererer").style.margin="15vh 0 0 0";
+        }
+        else if (id=="ANJ" || id=="RUJ" || id=="NEJ") {
+          document.getElementById("JAZMENU").style.display="block";
+          document.getElementById("Marginer").style.margin="";
+          document.getElementById("Marginerer").style.margin="";
+          document.getElementById("Marginererer").style.margin="15vh 0 0 0";
+        }
+        else {
+          document.getElementById("JAZMENU").style.display="";
+          document.getElementById("Marginer").style.margin="";
+          document.getElementById("Marginerer").style.margin="";
+          document.getElementById("Marginererer").style.margin="";
+        }
+      }
+    </script>
+
+  </body>
+</html>
